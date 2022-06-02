@@ -10,7 +10,7 @@ DB_DATABASE=laravel <br>
 DB_USERNAME=root <br>
 DB_PASSWORD=root <br>
 
-Если вібивает ошибку что нет доступа к папке storage:
+Если выбивает ошибку что нет доступа к папке storage:
 permission denied the exception occurred while attempting to log laravel docker
 
 то в командной строке самого Nginx ввести команду - 
