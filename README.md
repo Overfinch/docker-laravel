@@ -9,3 +9,9 @@ DB_PORT=3306 <br>
 DB_DATABASE=laravel <br>
 DB_USERNAME=root <br>
 DB_PASSWORD=root <br>
+
+Если вібивает ошибку что нет доступа к папке storage:
+permission denied the exception occurred while attempting to log laravel docker
+
+то в командной строке самого Nginx ввести команду - 
+chown -R www-data.www-data /var/www
