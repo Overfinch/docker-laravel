@@ -21,5 +21,5 @@ chown -R www-data.www-data /var/www
 - в терминале macos получить свой ip (ipconfig getifaddr en0) 
 - и подставить этот ip в конфиг xdebug.ini (xdebug.client_host=192.168.0.198)
 - настроить PhpStorm
-<img width="1099" alt="Снимок экрана 2022-06-23 в 18 45 25" src="https://user-images.githubusercontent.com/5227819/175340649-abc9e397-3082-428e-a577-7a98e328f423.png">
+<img width="1099" alt="Снимок экрана 2022-06-23 в 18 57 59" src="https://user-images.githubusercontent.com/5227819/175342963-71e51bb6-be76-49b0-9b7b-90f8f7b3c74e.png">
 <img width="806" alt="Снимок экрана 2022-06-23 в 18 47 47" src="https://user-images.githubusercontent.com/5227819/175340883-f22e9e17-fb5e-4225-ae51-2bd660413096.png">
