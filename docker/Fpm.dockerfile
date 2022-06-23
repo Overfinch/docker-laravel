@@ -9,6 +9,11 @@ RUN apt-get update && apt-get install -y \
     unzip \
     nodejs \
     npm
+
+# Для включения xdebug рвскомментировать
+#RUN pecl install xdebug-3.1.5 && docker-php-ext-enable xdebug
+#ADD docker/conf/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+
 RUN docker-php-ext-install zip pdo_mysql pdo_mysql mysqli
 
-WORKDIR /var/www/laravel-docker
+WORKDIR /var/www/php-test
