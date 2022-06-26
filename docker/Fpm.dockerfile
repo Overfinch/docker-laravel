@@ -16,4 +16,4 @@ RUN apt-get update && apt-get install -y \
 
 RUN docker-php-ext-install zip pdo_mysql pdo_mysql mysqli
 
-WORKDIR /var/www/php-test
+WORKDIR /var/www/laravel-docker
