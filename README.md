@@ -1,6 +1,8 @@
 # docker-laravel
 docker config for laravel development
 
+Везде заменить путь типа /var/www/laravel-docker на свой путь /var/www/{проект}
+
 DB connection config in .env file
 
 DB_CONNECTION=mysql <br>
