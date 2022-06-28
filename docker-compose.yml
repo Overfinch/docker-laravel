@@ -17,6 +17,9 @@ services:
             dockerfile: docker/Fpm.dockerfile
         volumes:
             -   ./:/var/www/laravel-docker
+            - type: "bind"
+              source: "/tmp"
+              target: "/tmp"
         links:
             -   mysql
     mysql:
