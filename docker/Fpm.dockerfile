@@ -15,5 +15,7 @@ RUN apt-get update && apt-get install -y \
 #ADD docker/conf/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 RUN docker-php-ext-install zip pdo_mysql pdo_mysql mysqli
+RUN npm install --global gulp-cli
+RUN npm install -g bower
 
 WORKDIR /var/www/laravel-docker
