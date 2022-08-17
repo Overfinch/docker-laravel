@@ -3,11 +3,11 @@ docker config for laravel development
 
 Везде можно заменить путь типа /var/www/laravel-docker на свой путь /var/www/{project_folder} (не обязательно)
 
-(Если подключатся к БД изнутри контейнера то host=mysql, а если из системы то то host=localhost port 3306)
+(Если подключатся к БД изнутри контейнера то host=mysql (по имени сервиса БД в docker-compose.yml), а если из системы то то host=localhost port 3306)
 DB connection config in .env file
 
 DB_CONNECTION=mysql <br>
-DB_HOST=mysql // хост указывается по имени сервиса базы данных в docker-compose.yml<br>
+DB_HOST=mysql <br>
 DB_PORT=3306 <br>
 DB_DATABASE=laravel <br>
 DB_USERNAME=root <br>
