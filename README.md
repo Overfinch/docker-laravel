@@ -1,7 +1,7 @@
 # docker-laravel
 docker config for laravel development
 
-Везде заменить путь типа /var/www/laravel-docker на свой путь /var/www/{project_folder}
+Везде можно заменить путь типа /var/www/laravel-docker на свой путь /var/www/{project_folder}
 
 (Если подключатся к БД изнутри контейнера то host=mysql, а если из системы то то host=localhost port 3306)
 DB connection config in .env file
