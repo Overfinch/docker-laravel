@@ -6,9 +6,9 @@ services:
             context: .
             dockerfile: docker/Nginx.dockerfile
         ports:
-            -   8098:80
+            -   8098:80 # порты, из системы мы ообращаеися к nginx по пути http://localhost:8098 , а изнутри контейнера http://nginx:80
         volumes:
-            - ./:/var/www/laravel-docker
+            - ./:/var/www/laravel-docker # вся текущая папка пробрасывается в контейнер по пути /var/www/laravel-docker
         links:
             - fpm
     fpm:
@@ -16,7 +16,7 @@ services:
             context: .
             dockerfile: docker/Fpm.dockerfile
         volumes:
-            -   ./:/var/www/laravel-docker
+            -   ./:/var/www/laravel-docker # вся текущая папка пробрасывается в контейнер по пути /var/www/laravel-docker
             - type: "bind" # пробрасываем папку /tmp в систему по адресу /tmp (для сохранения логов и профайлов xdebug)
               source: "/tmp"
               target: "/tmp"
@@ -28,13 +28,13 @@ services:
         command: --default-authentication-plugin=mysql_native_password
         restart: always
         ports:
-        -   3306:3306
+        -   3306:3306 
         environment:
             MYSQL_ROOT_PASSWORD: root
             TZ: "Europe/Kiev"
             #MYSQL_DATABASE: laravel
         volumes:
-            - mysql-data:/var/lib/mysql
+            - mysql-data:/var/lib/mysql # том для хранения БД mysql-data будет создан в самом докере, если хотим хранить в папке на локальной машине, то можно указать путь типа ./mysql-data:/var/lib/mysql 
 
     phpmyadmin:
         image: phpmyadmin
@@ -46,4 +46,4 @@ services:
             - PMA_HOST=mysql
 
 volumes:
-    mysql-data:
+    mysql-data: # том для хранения БД,
