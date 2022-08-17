@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
 # Для включения xdebug рвскомментировать
 #RUN pecl install xdebug-3.1.5 && docker-php-ext-enable xdebug
 #ADD docker/conf/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+ADD docker/conf/php.ini /usr/local/etc/php/php.ini
 
 RUN docker-php-ext-install zip pdo_mysql pdo_mysql mysqli
 RUN npm install --global gulp-cli
