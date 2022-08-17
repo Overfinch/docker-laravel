@@ -17,7 +17,7 @@ services:
             dockerfile: docker/Fpm.dockerfile
         volumes:
             -   ./:/var/www/laravel-docker
-            - type: "bind"
+            - type: "bind" # пробрасываем папку /tmp в систему по адресу /tmp (для сохранения логов и профайлов xdebug)
               source: "/tmp"
               target: "/tmp"
         links:
