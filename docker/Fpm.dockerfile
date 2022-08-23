@@ -6,9 +6,11 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libzip-dev \
-    unzip \
-    nodejs \
-    npm
+    unzip 
+
+# устанавливаем nodejs с другого репозитория где мы можем выбрать версию
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
+RUN apt-get install -y nodejs
 
 # Для включения xdebug рвскомментировать
 #RUN pecl install xdebug-3.1.5 && docker-php-ext-enable xdebug
