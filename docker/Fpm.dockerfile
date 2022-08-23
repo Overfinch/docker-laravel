@@ -18,8 +18,9 @@ RUN apt-get install -y nodejs
 ADD docker/conf/php.ini /usr/local/etc/php/php.ini
 
 RUN docker-php-ext-install zip pdo_mysql pdo_mysql mysqli
-RUN npm install --global gulp-cli
-RUN npm install -g bower
+#RUN npm install --global gulp-cli
+#RUN npm install -g bower
+
 # Альтернативный способ установить composer
 #RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
