@@ -22,6 +22,9 @@ services:
               target: "/tmp"
         links:
             -   mysql
+        ports:
+            - "9000:9000"
+            - "3000:3000" # дополнительный порт для вебпака/Vite 
     mysql:
         platform: linux/x86_64 # add for mac m1
         image: mysql
