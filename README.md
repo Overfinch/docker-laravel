@@ -20,8 +20,10 @@ permission denied the exception occurred while attempting to log laravel docker
 chown -R www-data.www-data /var/www
 
 # Laravel Vite
-Для того что бы запустить режим разработки в Vite, надо запускать fpm контейнер отдельно и "публиковать" порты - docker compose run --publish 3000:3000 fpm npm run dev <br>
-И вписать правильный конфиг сервера в vite.config.js
+
+у контейнера fpm в котором находится в.т.ч. node, проброшен дополнительный порт 3000 <br>
+
+конфиг сервера в vite.config.js
 
     server: {
         hmr: {
