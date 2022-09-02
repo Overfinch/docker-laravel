@@ -19,6 +19,18 @@ permission denied the exception occurred while attempting to log laravel docker
 то в командной строке самого Nginx ввести команду - 
 chown -R www-data.www-data /var/www
 
+# Laravel Vite
+Для того что бы запустить режим разработки в Vite, надо запускать fpm контейнер отдельно и "публиковать" порты - docker compose run --publish 3000:3000 fpm npm run dev
+И вписать правильный конфиг сервера в vite.config.js
+
+    server: {
+        hmr: {
+            host: 'localhost'
+        },
+        port: 3000,
+        host: '0.0.0.0',
+    },
+
 # Xdebug
 - для подключения xdebug надо раскомментировать его в Fpm.dockerfile
 - в терминале macos получить свой ip (ipconfig getifaddr en0) 
