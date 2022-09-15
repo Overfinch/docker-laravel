@@ -12,7 +12,11 @@ RUN apt-get update && apt-get install -y \
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get install -y nodejs
 
-# Для включения xdebug рвскомментировать
+# Для установки Redis расскомментировать
+#RUN pecl install redis \
+#&&  docker-php-ext-enable redis
+
+# Для включения xdebug раскомментировать
 #RUN pecl install xdebug-3.1.5 && docker-php-ext-enable xdebug
 #ADD docker/conf/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 ADD docker/conf/php.ini /usr/local/etc/php/php.ini
