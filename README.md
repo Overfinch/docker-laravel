@@ -13,6 +13,9 @@ DB_DATABASE=laravel <br>
 DB_USERNAME=root <br>
 DB_PASSWORD=root <br>
 
+Установить url приложения в .env <br>
+APP_URL=http://localhost:8098
+
 Если выбивает ошибку что нет доступа к папке storage:
 permission denied the exception occurred while attempting to log laravel docker
 
