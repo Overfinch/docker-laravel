@@ -6,7 +6,8 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libzip-dev \
-    unzip 
+    libpng-dev \
+    unzip
 
 # устанавливаем nodejs с другого репозитория где мы можем выбрать версию
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
@@ -21,7 +22,7 @@ RUN apt-get install -y nodejs
 #ADD docker/conf/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 ADD docker/conf/php.ini /usr/local/etc/php/php.ini
 
-RUN docker-php-ext-install zip pdo_mysql pdo_mysql mysqli
+RUN docker-php-ext-install zip pdo_mysql pdo_mysql mysqli gd exif
 #RUN npm install --global gulp-cli
 #RUN npm install -g bower
 
