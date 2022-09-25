@@ -17,10 +17,11 @@ DB_PASSWORD=root <br>
 APP_URL=http://localhost:8098
 
 Если выбивает ошибку что нет доступа к папке storage:
-permission denied the exception occurred while attempting to log laravel docker
-
+permission denied the exception occurred while attempting to log laravel docker <br>
 то в командной строке самого Nginx ввести команду - 
 chown -R www-data.www-data /var/www
+
+Если не пускает залогиниться в phpmyadmin, то нужно один раз открыть консоль mysql из докера
 
 # Laravel Vite
 
