@@ -7,6 +7,8 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libzip-dev \
     libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
     unzip
 
 # устанавливаем nodejs с другого репозитория где мы можем выбрать версию
@@ -20,8 +22,10 @@ RUN apt-get install -y nodejs
 # Для включения xdebug раскомментировать
 #RUN pecl install xdebug-3.1.5 && docker-php-ext-enable xdebug
 #ADD docker/conf/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+
 ADD docker/conf/php.ini /usr/local/etc/php/php.ini
 
+RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg
 RUN docker-php-ext-install zip pdo_mysql pdo_mysql mysqli gd exif
 #RUN npm install --global gulp-cli
 #RUN npm install -g bower
