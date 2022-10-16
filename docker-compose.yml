@@ -37,7 +37,8 @@ services:
             TZ: "Europe/Kiev"
             #MYSQL_DATABASE: laravel
         volumes:
-            - mysql-data:/var/lib/mysql # том для хранения БД mysql-data будет создан в самом докере, если хотим хранить в папке на локальной машине, то можно указать путь типа ./mysql-data:/var/lib/mysql 
+            - ./docker/mysql-data:/var/lib/mysql # Данные MYSQL будут хранится в папке /docker/mysql-data, если хотим использовать Том, то можно указать путь типа mysql-data:/var/lib/mysql
+            #- mysql-data:/var/lib/mysql # том для хранения БД mysql-data будет создан в самом докере, если хотим хранить в папке на локальной машине, то можно указать путь типа ./mysql-data:/var/lib/mysql 
 
     phpmyadmin:
         image: phpmyadmin
