@@ -25,8 +25,19 @@ RUN apt-get install -y nodejs
 
 ADD docker/conf/php.ini /usr/local/etc/php/php.ini
 
-RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg
-RUN docker-php-ext-install zip pdo_mysql pdo_mysql mysqli gd exif
+RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg \
+  && docker-php-ext-install \
+    zip \
+    pdo_mysql \
+    pdo_mysql \
+    mysqli \
+    gd \
+    exif
+
+RUN docker-php-ext-configure pcntl --enable-pcntl \
+  && docker-php-ext-install \
+    pcntl
+    
 #RUN npm install --global gulp-cli
 #RUN npm install -g bower
 
