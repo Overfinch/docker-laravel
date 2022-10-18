@@ -50,4 +50,4 @@ services:
             - PMA_HOST=mysql
 
 volumes:
-    mysql-data: # том для хранения БД,
+    mysql-data: # том для хранения БД, Если исполюзуется том в настройках mysql volumes:
