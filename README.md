@@ -21,7 +21,7 @@ permission denied the exception occurred while attempting to log laravel docker 
 то в командной строке самого Nginx ввести команду - 
 chown -R www-data.www-data /var/www
 
-Если не пускает залогиниться в phpmyadmin, то нужно один раз открыть консоль mysql из докера
+Если выдаёт ошибку "mysql connection refused" или не пускает залогиниться в phpmyadmin, то нужно один раз открыть консоль mysql из докера
 
 # Laravel Vite
 
