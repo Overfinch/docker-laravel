@@ -26,6 +26,7 @@ chown -R www-data.www-data /var/www
 # Laravel Vite
 
 у контейнера fpm в котором находится в.т.ч. node, проброшен дополнительный порт 3000 <br>
+на котором будет запускаться websocket  на котором будет работать Vite <br>
 
 конфиг сервера в vite.config.js
 
