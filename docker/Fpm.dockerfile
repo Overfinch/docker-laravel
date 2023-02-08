@@ -37,7 +37,7 @@ RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg \
 RUN docker-php-ext-configure pcntl --enable-pcntl \
   && docker-php-ext-install \
     pcntl
-    
+
 #RUN npm install --global gulp-cli
 #RUN npm install -g bower
 
