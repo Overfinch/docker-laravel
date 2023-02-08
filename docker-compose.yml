@@ -26,7 +26,7 @@ services:
             - "9000:9000"
             - "3000:3000" # дополнительный порт для websocket на котором будут крутиться (webpack,Vite) 
     mysql:
-        platform: linux/x86_64 # add for mac m1
+        #platform: linux/x86_64 # если не будет работать на mac m1
         image: mysql
         command: --default-authentication-plugin=mysql_native_password
         restart: always
