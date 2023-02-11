@@ -8,7 +8,7 @@ services:
         ports:
             -   8098:80 # порты, из системы мы ообращаеися к nginx по пути http://localhost:8098 , а изнутри контейнера http://nginx:80
         volumes:
-            - ./:/var/www/laravel-docker # вся текущая папка пробрасывается в контейнер по пути /var/www/laravel-docker
+            - ./:/var/www/site.com # вся текущая папка пробрасывается в контейнер по пути /var/www/site.com
         links:
             - fpm
     fpm:
@@ -16,7 +16,7 @@ services:
             context: .
             dockerfile: docker/Fpm.dockerfile
         volumes:
-            -   ./:/var/www/laravel-docker # вся текущая папка пробрасывается в контейнер по пути /var/www/laravel-docker
+            -   ./:/var/www/site.com # вся текущая папка пробрасывается в контейнер по пути /var/www/site.com
             - type: "bind" # пробрасываем папку /tmp в систему по адресу /tmp (для сохранения логов и профайлов xdebug)
               source: "/tmp"
               target: "/tmp"
