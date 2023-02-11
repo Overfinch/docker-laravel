@@ -3,7 +3,7 @@ docker config for laravel development
 
 (Если подключатся к БД изнутри контейнера то host=mysql (по имени сервиса БД в docker-compose.yml), а если из системы то то host=localhost port 3306)
 DB connection config in .env file
-```
+```php
 DB_CONNECTION=mysql
 DB_HOST=mysql 
 DB_PORT=3306 
@@ -12,7 +12,7 @@ DB_USERNAME=root
 DB_PASSWORD=root 
 ```
 Установить url приложения в .env <br>
-```
+```php
 APP_URL=http://localhost:8098
 ```
 
@@ -29,7 +29,7 @@ chown -R www-data.www-data /var/www
 на котором будет запускаться websocket  на котором будет работать Vite <br>
 
 конфиг сервера в vite.config.js
-
+```js
     server: {
         hmr: {
             host: 'localhost'
@@ -37,7 +37,7 @@ chown -R www-data.www-data /var/www
         port: 3000,
         host: '0.0.0.0',
     },
-
+```
 # Xdebug
 - для подключения xdebug надо раскомментировать его в Fpm.dockerfile
 - в терминале macos получить свой ip (ipconfig getifaddr en0) 
