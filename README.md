@@ -3,16 +3,18 @@ docker config for laravel development
 
 (Если подключатся к БД изнутри контейнера то host=mysql (по имени сервиса БД в docker-compose.yml), а если из системы то то host=localhost port 3306)
 DB connection config in .env file
-
-DB_CONNECTION=mysql <br>
-DB_HOST=mysql <br>
-DB_PORT=3306 <br>
-DB_DATABASE=laravel <br>
-DB_USERNAME=root <br>
-DB_PASSWORD=root <br>
-
+```
+DB_CONNECTION=mysql
+DB_HOST=mysql 
+DB_PORT=3306 
+DB_DATABASE=laravel 
+DB_USERNAME=root 
+DB_PASSWORD=root 
+```
 Установить url приложения в .env <br>
+```
 APP_URL=http://localhost:8098
+```
 
 Если выбивает ошибку что нет доступа к папке storage:
 permission denied the exception occurred while attempting to log laravel docker <br>
