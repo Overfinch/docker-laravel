@@ -41,8 +41,12 @@ chown -R www-data.www-data /var/www
 - в терминале macos получить свой ip (ipconfig getifaddr en0) 
 - и подставить этот ip в конфиг xdebug.ini (xdebug.client_host=192.168.0.198)
 - настроить PhpStorm
-- 
-<img width="1094" alt="Снимок экрана 2022-08-28 в 13 26 17" src="https://user-images.githubusercontent.com/5227819/187069327-89e51fbd-527a-4646-b6b2-e0e462e073f2.png">
+
+<img width="1094" alt="Снимок экрана 2023-02-11 в 23 13 28" src="https://user-images.githubusercontent.com/5227819/218281433-54fe4db1-f6a9-4cea-a80d-fed72fe3bdc4.png">
 
 
 <img width="965" alt="Снимок экрана 2022-08-28 в 13 22 57" src="https://user-images.githubusercontent.com/5227819/187069224-45c4edaf-4c5e-45db-8979-2d269e4b0507.png">
+
+дальше нужно поставить точку остановы и включить "прослушивание" сервера, и запустить в браузере путь который запустить файл.
+<img width="396" alt="Снимок экрана 2023-02-11 в 23 19 02" src="https://user-images.githubusercontent.com/5227819/218281715-43be5fa0-293f-438b-a8bb-28ddd3bb3896.png">
+
