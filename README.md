@@ -1,9 +1,9 @@
 # docker-laravel
 docker config for laravel development
 
-Скопировать всё в папку проэкта
-запустить docker compose build
-запустить docker compose up -d
+Скопировать всё в папку проэкта <br>
+Запустить `docker compose build` <br>
+Запустить `docker compose up -d`
 
 
 (Если подключатся к БД изнутри контейнера то host=mysql (по имени сервиса БД в docker-compose.yml), а если из системы то то host=localhost port 3306)
