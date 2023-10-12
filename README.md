@@ -1,7 +1,7 @@
 # docker-laravel
 docker config for laravel development
 
-Скопировать всё в папку проэкта <br>
+Скопировать всё в папку проекта <br>
 Запустить `docker compose build` <br>
 Запустить `docker compose up -d`
 
