@@ -2,6 +2,7 @@ version: "3.3"
 
 services:
     nginx:
+        #image: overfinch/docker-laravel-nginx:1.0 # если не надо билдить специфический контейнер, то можно использовать готовый overfinch/docker-laravel-nginx, и закомментировать следующий блок build
         build:
             context: .
             dockerfile: docker/Nginx.dockerfile
@@ -12,6 +13,7 @@ services:
         links:
             - fpm
     fpm:
+        #image: overfinch/docker-laravel-fpm:8.1 # если не надо билдить специфический контейнер, то можно использовать готовый overfinch/docker-laravel-fpm, и закомментировать следующий блок build
         build:
             context: .
             dockerfile: docker/Fpm.dockerfile
